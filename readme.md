@@ -10,8 +10,8 @@ V cmd udělejte tyhle kroky:
 
 ### 1. Naklonování repozitáře
 ```bash
-git clone https://github.com/VojtaR2/bike-project.git
-cd bike-project
+git clone https://github.com/bortlikmatej/Project2.git
+cd probike
 ```
 
 ### 2. Nainstaluj virtualní prostředí
