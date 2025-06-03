@@ -34,4 +34,4 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-
+Project by Bortlík, Rašťák, Večerka
