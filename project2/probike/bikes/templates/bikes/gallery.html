@@ -1,0 +1,30 @@
+{% extends "bikes/layout.html" %}
+{% load static %}
+
+
+
+{% block nav_right %}
+<a href="{% url 'index' %}" class="nav-link">
+    <i class="fas fa-arrow-left"></i> Zpět na konfigurátor
+</a>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="main-content">
+  <h2>Galerie hotových staveb</h2>
+  <div class="gallery-grid">
+    {% for img in images %}
+      <div class="gallery-item">
+        <img src="{{ img.image.url }}" alt="{{ img.title }}">
+        
+        
+        <p>{{ img.title }}</p>
+      </div>
+    {% empty %}
+      <p>Galerie je zatím prázdná.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

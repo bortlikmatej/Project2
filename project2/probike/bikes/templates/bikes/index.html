@@ -1,0 +1,44 @@
+{% extends 'bikes/layout.html' %}
+{% load humanize %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="main-content">
+      <h2>Konfigurátor kola</h2>
+    
+      <form method="POST">
+        {% csrf_token %}
+    
+        <div class="form-group">
+          <label for="ram">Rám</label>
+          {{ form.ram }}
+        </div>
+    
+        <div class="form-group">
+          <label for="vidlice">Vidlice</label>
+          {{ form.vidlice }}
+        </div>
+    
+        <div class="form-group">
+          <label for="brzdy">Brzdy</label>
+          {{ form.brzdy }}
+        </div>
+    
+        <div class="form-group">
+          <label for="prehazovacka">Přehazovačka</label>
+          {{ form.prehazovacka }}
+        </div>
+    
+        <button type="submit" class="btn">Spočítat cenu</button>
+      </form>
+    
+      {% if vysledna_cena %}
+        <div class="result-content">
+          <h3>Celková cena: {{ vysledna_cena|intcomma:"0" }} Kč</h3>
+        </div>
+      {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+
+
